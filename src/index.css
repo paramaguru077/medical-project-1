@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #004080;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f8ff;
+}
+
+.hero-section img {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.cta-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Features Section */
+.features-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 0;
+  background: #e0e0e0;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  flex: 1 1 calc(33.33% - 30px); /* 3 items per row */
+  max-width: 300px;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+  padding: 50px 0;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.ingredient-item img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* News Section */
+.news-section {
+  padding: 50px 0;
+  background: #f0f0f0;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.news-item img {
+  width: 100%;
+  max-width: 390px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .features-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-item {
+    flex: 1 1 100%; /* Full width */
+  }
+
+  .news-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section img {
+    width: 150px; /* Smaller hero image */
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
